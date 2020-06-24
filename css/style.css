@@ -1,18 +1,35 @@
+body{
+   margin: 0%;
+}
 .navigation {
-    display: inline-block;
+    display: inline-flex;
     vertical-align: top;
     width: 100%;
     padding: 1%;
     background-color: lightslategray;
  }
+ .nav {
+   margin-right: 30px !important;
+   margin-left: auto;
+   align-items: center;
+   justify-content: flex-end;
+   font-family: 'Montserrat', sans-serif; 
+   color: white;
+ }
+.nav-link {
+   color: white;
+}
  .logo {
-    width: 23%;
+    display: flex;
+    width: 10%;
     padding: 1%;
-    text-align: center;
+    align-items: left;
+    /* margin-left: 30px; */
  }
  ul{
+    display: flex;
     width: 50%;
-    margin-left: auto;
+   margin-left: auto;
  }
  .heroImg {
     height: 300px;
@@ -28,10 +45,152 @@
     background-color: #6d6d74;
     padding: center;
  }
- ul {
+ /* ul {
     width: 50%;
     margin-left: auto;
   
+ } */
+ .flexContainer {
+ display: flex;
+ background-color: #819EA9;
+ /* flex-wrap: wrap; */
+ /* width: 100%; */
+ margin-left: 50px;
+ margin-right: 50px;
+ /* height: 70vh; */
+ }
+ .skillTypes{
+    margin: 40px;
+    padding: 20px;
+    background-color: rgb(252, 250, 248);
  }
  
+
+ * {
+outline: 1px solid red;
+
+ }
+
+.workGrid {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-template-rows: auto auto;
+   grid-template-areas: 
+   "img1 content1 content1"
+   "img1 . cta1"
+   "img2 content2 content2"
+   "img2 . cta2"
+   "img3 content3 content3"
+   "img3 . cta3";
+   padding: 10px;
+   border: 20px;
+   margin: 30px;
+}
+.workGridItem {
+   margin-bottom: 20px;
+   background-color:#819EA9;
+   border-radius: 15px;
+   margin: 30px;
+
+}
+
+#img1{
+   grid-area: img1;
+}
+#content1{
+   grid-area: content1;
+}
+#cta1{
+   grid-area: cta1;
+}
+#img2{
+   grid-area: img2;
+}
+#content2{
+   grid-area: content2;
+}
+#cta2{
+   grid-area: cta2;
+}
+#img3{
+   grid-area: img3;
+}
+#content3{
+   grid-area: content3;
+}
+#cta3{
+   grid-area: cta3;
+}
+.workGrid img {
+   width: 500px;
+}
+
+h1{
+   padding: 15px;
+   margin-left: 24px;
+   font-family: 'Montserrat', sans-serif;
+}
+h3{
+   padding: 15px;
+   margin-left: 24px;
+   font-family: 'Montserrat', sans-serif;
+}
+h4 {
+   margin-top: 40px;
+   padding: 15px;  
+   font-family: 'Montserrat', sans-serif;
+   color: ;
+}
+h5 {
+   font-size: 14;
+   font-family: 'Montserrat', sans-serif;
+   color: white;
+}
+p {
+   padding: 15px;
+   font-family: 'Esteban', serif;
+}
+
+@media only screen and (max-width: 100px) {
+   .flexContainer {
+      flex-direction: column;
+   }
+   /* .skillTypes {
+      width: 100%;
+   } */
+
+   .workGrid {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "img1" "content1" "cta1"
+    "img2" "content2" "cta2"
+    "img3" "content3" "cta3";
+    }
  
+
+}
+@media only screen and (max-width: 600px) {
+   .flexContainer {
+      flex-direction: column;
+   }
+   /* .skillTypes {
+      width: 100%;
+   } */
+
+   .workGrid {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "img1" "content1" "cta1"
+    "img2" "content2" "cta2"
+    "img3" "content3" "cta3";
+    }
+ 
+
+}
+
